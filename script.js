@@ -1,4 +1,6 @@
-const fs = require('fs');
+// File Sysytem Codes
+
+// const fs = require('fs');
 
 
 // To make a file with some data or text
@@ -48,7 +50,18 @@ const fs = require('fs');
 //     else console.log("Removed");
 // })
 
-fs.rm("./copy",{recursive: true}, function(err){
-    if(err) console.error(err.message);
-    else console.log("Removed");
+// fs.rm("./copy",{recursive: true}, function(err){
+//     if(err) console.error(err.message);
+//     else console.log("Removed");
+// })
+
+
+// HTTP Codes
+
+const http = require("http");
+
+const server = http.createServer(function(req, res){
+    res.end("Hello World");
 })
+
+server.listen(3000);
