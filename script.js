@@ -58,10 +58,12 @@
 
 // HTTP Codes
 
-const http = require("http");
+// const http = require("http");
 
-const server = http.createServer(function(req, res){
-    res.end("Hello World");
-})
+// const server = http.createServer(function(req, res){
+//     res.end("Hello World");
+// })
 
-server.listen(3000);
+// server.listen(3000);
+
+console.log("Hello Wolrd");
