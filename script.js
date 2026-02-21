@@ -66,4 +66,33 @@
 
 // server.listen(3000);
 
-console.log("Hello Wolrd");
+// console.log("Hello Wolrd");
+
+
+// Learninig Express
+
+const express = require("express");
+const app = express()
+
+//Middleware
+app.use(function(req, res, next){
+    console.log("Middleware is running");
+    next();
+})
+
+app.get("/", function(req, res){
+    res.send("Hello World");
+})
+
+app.get("/profile", function(req, res, next){
+    return next(new Error("Something went wrong."))
+})
+
+// Error Handler
+app.use((err, req, res, next) =>{
+    console.error(err.stack)
+    res.status(500).send("Something went wrong !!");
+})
+
+
+app.listen(3000);
