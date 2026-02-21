@@ -1,0 +1,20 @@
+{
+  "name": "learning-beginner-nodejs-backend",
+  "version": "1.0.0",
+  "description": "Learning NodeJS form Basics\r <br>\r Author - Md Mihran Sohail\r <br>\r Date - 21st Feb 2026 (2nd Semester of my college).",
+  "homepage": "https://github.com/CodeWithMihran/Learning-Beginner-NodeJS-Backend#readme",
+  "bugs": {
+    "url": "https://github.com/CodeWithMihran/Learning-Beginner-NodeJS-Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeWithMihran/Learning-Beginner-NodeJS-Backend.git"
+  },
+  "license": "ISC",
+  "author": "Md Mihran Sohail",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
