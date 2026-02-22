@@ -1,0 +1,102 @@
+// File Sysytem Codes
+
+// const fs = require('fs');
+
+
+// To make a file with some data or text
+
+// fs.writeFile("first.txt", "This is the data", function(err){
+//     if(err) console.error(err);
+//     else console.log("Done");
+// })
+
+
+// To appemd the file
+
+// fs.appendFile("first.txt", "\nAuthor - Md Mihran Sohail", function(err){
+//     if(err) console.error(err);
+//     else console.log("Done");
+// })
+
+
+// To rename the file
+
+// fs.rename("first.txt", "Data.txt", function(err){
+//     if(err) console.error(err);
+//     else console.log("Done");
+// })
+
+
+// To copy the file
+
+// fs.copyFile("Data.txt", "./copy/Data1.txt", function(err){
+//     if(err) console.error(err.message);
+//     else console.log("Done");
+// })
+
+
+// To Remove the file
+
+// fs.unlink("./copy/Data1.txt", function(err){
+//     if(err) console.error(err.message);
+//     else console.log("Removed");
+// })
+
+
+// To Remove the folder
+
+// fs.rmdir("./copy",{recursive: true}, function(err){
+//     if(err) console.error(err.message);
+//     else console.log("Removed");
+// })
+
+// fs.rm("./copy",{recursive: true}, function(err){
+//     if(err) console.error(err.message);
+//     else console.log("Removed");
+// })
+
+
+// HTTP Codes
+
+// const http = require("http");
+
+// const server = http.createServer(function(req, res){
+//     res.end("Hello World");
+// })
+
+// server.listen(3000);
+
+// console.log("Hello Wolrd");
+
+
+// Learninig Express
+
+const express = require("express");
+const app = express()
+
+// To read the unreadable form of data input by the user which is in the form of blob (when in form of binary).
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
+//Middleware
+app.use(function(req, res, next){
+    console.log("Middleware is running");
+    next();
+})
+
+app.get("/", function(req, res){
+    res.send("Hello World");
+})
+
+app.get("/profile", function(req, res, next){
+    return next(new Error("Something went wrong."))
+})
+
+// Error Handler
+app.use((err, req, res, next) =>{
+    console.error(err.stack)
+    res.status(500).send("Something went wrong !!");
+})
+
+
+app.listen(3000);
