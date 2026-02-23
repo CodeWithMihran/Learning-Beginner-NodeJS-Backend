@@ -1,0 +1,1 @@
+It is not easy to be a programmer, handling errors, debugging codes, implementing the logic and coding thousands of line is a stressful work to do on the daily basis. As a programmer myself, I face various problems to manage all these things on my own.
